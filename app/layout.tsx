@@ -19,6 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/* Hidden Netlify form for detection */}
+        <form name="netlify-dummy-form" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+          <input type="hidden" name="form-name" value="netlify-dummy-form" />
+          <input name="bot-field" /> { /* Honeypot field */ }
+        </form>
         <Providers>{children}</Providers>
       </body>
     </html>
